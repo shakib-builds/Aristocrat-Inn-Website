@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact · Hotel Aristocrat Inn, Gulshan-2, Dhaka</title>
+  <meta name="description" content="Call, WhatsApp, email or visit Hotel Aristocrat Inn in Gulshan-2, Dhaka. Our reception is open 24 hours, every day.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;1,400&family=Inter:wght@500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/form-fields.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">Aristocrat Inn</a>
+      <nav class="nav" aria-label="Main">
+        <a href="rooms.html">Rooms</a>
+        <a href="restaurant.html">Restaurant</a>
+        <a href="conference.html">Conference</a>
+        <a href="booking.html">Booking</a>
+        <a href="index.html#facilities">Facilities</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <a class="btn btn--header" href="booking.html">Book your stay</a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== Page hero ===== -->
+    <section class="c-hero">
+      <div class="c-hero__inner">
+        <div class="c-hero__bg"><img src="assets/img/contact-hero.jpg" alt="" fetchpriority="high"></div>
+        <nav class="crumbs crumbs--light" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Contact</span></nav>
+        <h1 class="c-hero__title">We’re here, <span class="it-lg">24/7</span></h1>
+        <p class="c-hero__text">Our reception is open around the clock. Call, message or visit us in Gulshan-2 – we usually reply within the hour.</p>
+      </div>
+    </section>
+
+    <!-- ===== Contact options ===== -->
+    <section class="c-options" aria-label="Ways to reach us">
+      <div class="wrap">
+        <article class="c-card">
+          <img class="c-card__icon" src="assets/icons/contact-call.svg" width="28" height="28" alt="">
+          <h2 class="c-card__label">Call</h2>
+          <a class="c-card__value" href="tel:+8801817019200">+880 1817 019200</a>
+          <a class="c-card__value" href="tel:+8801732279155">+880 1732 279155</a>
+          <a class="c-card__value" href="tel:+8801924304304">+880 1924 304304</a>
+          <a class="c-card__value" href="tel:+880222281014">+880 2 222281014</a>
+          <a class="c-card__link" href="tel:+8801817019200">Call now →</a>
+        </article>
+        <article class="c-card">
+          <img class="c-card__icon" src="assets/icons/contact-whatsapp.svg" width="28" height="28" alt="">
+          <h2 class="c-card__label">WhatsApp</h2>
+          <p class="c-card__value">+880 1817 019200</p>
+          <p class="c-card__value">Fastest for bookings and airport pickup</p>
+          <a class="c-card__link" href="https://wa.me/8801817019200" target="_blank" rel="noopener">Open WhatsApp →</a>
+        </article>
+        <article class="c-card">
+          <img class="c-card__icon" src="assets/icons/contact-email.svg" width="28" height="28" alt="">
+          <h2 class="c-card__label">Email</h2>
+          <p class="c-card__value">a_inn@hotmail.com</p>
+          <p class="c-card__value">For bookings, events and general questions</p>
+          <a class="c-card__link" href="mailto:a_inn@hotmail.com">Send an email →</a>
+        </article>
+        <article class="c-card">
+          <img class="c-card__icon" src="assets/icons/contact-visit.svg" width="28" height="28" alt="">
+          <h2 class="c-card__label">Visit</h2>
+          <p class="c-card__value">House 12, Road 68/A</p>
+          <p class="c-card__value">Gulshan-2, Dhaka 1212, Bangladesh</p>
+          <a class="c-card__link" href="https://maps.google.com/?q=Hotel+Aristocrat+Inn+House+12+Road+68A+Gulshan+2+Dhaka" target="_blank" rel="noopener">Open in Google Maps →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Form + map ===== -->
+    <section class="c-main" id="message">
+      <div class="wrap">
+        <div class="c-form-col">
+          <p class="eyebrow">send a message</p>
+          <h2 class="h-sub">Write to <span class="it-lg">us</span></h2>
+
+          <form class="f-form" id="contact-form" novalidate data-success="contact-success">
+            <div class="f-row">
+              <div class="f-wrap">
+                <label class="f-field" for="c-name">
+                  <span class="f-field__label">Full name</span>
+                  <input class="f-field__input" id="c-name" name="name" type="text" autocomplete="name" placeholder="Your name" required data-error-required="Please enter your name.">
+                </label>
+                <p class="f-error" id="c-name-error" hidden></p>
+              </div>
+              <div class="f-wrap">
+                <label class="f-field" for="c-phone">
+                  <span class="f-field__label">Phone</span>
+                  <input class="f-field__input" id="c-phone" name="phone" type="tel" autocomplete="tel" placeholder="+880…" data-phone>
+                </label>
+                <p class="f-error" id="c-phone-error" hidden></p>
+              </div>
+            </div>
+            <div class="f-row">
+              <div class="f-wrap">
+                <label class="f-field" for="c-email">
+                  <span class="f-field__label">Email</span>
+                  <input class="f-field__input" id="c-email" name="email" type="email" autocomplete="email" placeholder="you@email.com" required data-error-required="Please enter your email address.">
+                </label>
+                <p class="f-error" id="c-email-error" hidden></p>
+              </div>
+              <div class="f-wrap">
+                <label class="f-field f-field--select" for="c-topic">
+                  <span class="f-field__label">Topic</span>
+                  <span class="f-select"><select class="f-field__input" id="c-topic" name="topic">
+                    <option>Room booking</option>
+                    <option>Airport pickup</option>
+                    <option>Restaurant</option>
+                    <option>Banquet &amp; events</option>
+                    <option>Conference</option>
+                    <option>Other question</option>
+                  </select></span>
+                </label>
+              </div>
+            </div>
+            <div class="f-wrap">
+              <label class="f-field f-field--area" for="c-message">
+                <span class="f-field__label">Message</span>
+                <textarea class="f-field__input" id="c-message" name="message" rows="7" placeholder="How can we help?" required data-error-required="Please write a short message."></textarea>
+              </label>
+              <p class="f-error" id="c-message-error" hidden></p>
+            </div>
+            <button class="btn btn--primary" type="submit">Send message</button>
+            <p class="f-note">We reply within a few hours – faster on WhatsApp.</p>
+          </form>
+
+          <div class="f-success" id="contact-success" tabindex="-1" hidden>
+            <p class="f-success__title">Thank you, <span class="it">message received</span></p>
+            <p>We’ll reply within a few hours. For anything urgent, message us on <a href="https://wa.me/8801817019200" target="_blank" rel="noopener">WhatsApp</a> or call <a href="tel:+8801817019200">+880 1817 019200</a>.</p>
+          </div>
+        </div>
+
+        <div class="c-map-col">
+          <a class="c-map" href="https://maps.google.com/?q=Hotel+Aristocrat+Inn+House+12+Road+68A+Gulshan+2+Dhaka" target="_blank" rel="noopener" aria-label="Open the hotel location in Google Maps">
+            <img class="c-map__img" src="assets/img/map.jpg" alt="Map of Gulshan-2 showing the hotel on Road 68A" loading="lazy">
+            <div class="c-map__pin">
+              <span class="map__label">House 12, Road No 68A, Gulshan 2, Dhaka 1212, Bangladesh</span>
+              <img class="map__arrow" src="assets/icons/map-arrow.svg" alt="">
+              <span class="marker" aria-hidden="true">
+                <img class="m1" src="assets/icons/marker-1.svg" alt="">
+                <img class="m2" src="assets/icons/marker-2.svg" alt="">
+                <img class="m3" src="assets/icons/marker-3.svg" alt="">
+                <img class="m4" src="assets/icons/marker-4.svg" alt="">
+              </span>
+            </div>
+          </a>
+          <dl class="c-facts">
+            <div><dt>From the airport</dt><dd>4.7 km · ~15 min · free hotel pickup</dd></div>
+            <div><dt>Reception</dt><dd>Open 24 hours, every day</dd></div>
+            <div><dt>Check-in / check-out</dt><dd>12:00 noon</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq" id="faq">
+      <div class="wrap">
+        <div class="faq__head">
+          <p class="eyebrow">good to know</p>
+          <h2 class="h-section">Questions <span class="it-lg">before you book</span></h2>
+        </div>
+        <div class="faq__list">
+          <details class="faq__item" open>
+            <summary>Is airport pickup free?</summary>
+            <p class="faq__answer">Yes. Pickup from Hazrat Shahjalal Airport, 4.7 km (about 15 minutes) away, is complimentary, and our airport booth is open 24 hours. Send your flight number when you book.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Can you help with a visa on arrival?</summary>
+            <p class="faq__answer">Yes. Our airport protocol service helps with immigration, customs, visa on arrival and luggage clearance.</p>
+          </details>
+          <details class="faq__item">
+            <summary>What are check-in and check-out times?</summary>
+            <p class="faq__answer">Please contact us for current check-in and check-out times. We’re happy to arrange early arrival or late departure when rooms allow.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Is there WiFi in the rooms?</summary>
+            <p class="faq__answer">Yes. Every room has free WiFi up to 50 Mbps.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Is breakfast included?</summary>
+            <p class="faq__answer">Yes. A buffet breakfast at our rooftop restaurant is included with every stay.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Can you arrange transport and tours?</summary>
+            <p class="faq__answer">Yes. We offer a 24-hour car service, air ticketing and sightseeing tours. Ask at the front desk or message us on WhatsApp.</p>
+          </details>
+        </div>
+        <p class="faq__more">Still have a question? Message us on <a href="https://wa.me/8801817019200" target="_blank" rel="noopener">WhatsApp</a> or call <a href="tel:+8801817019200">+880 1817 019200</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="contact">
+    <div class="wrap">
+      <div class="footer__top">
+        <div class="panel">
+          <h2>Plan your stay <span class="it-lg">with us</span></h2>
+          <div class="contact-list">
+            <a href="tel:+8801817019200"><span>Call</span><span>+880 1817 019200  →</span></a>
+            <a href="https://wa.me/8801817019200" target="_blank" rel="noopener"><span>WhatsApp</span><span>+880 1817 019200  →</span></a>
+            <a href="mailto:a_inn@hotmail.com"><span>Email</span><span>a_inn@hotmail.com  →</span></a>
+          </div>
+        </div>
+
+        <div class="panel footer__cols">
+          <div class="footer__col footer__col--explore">
+            <h3>Explore</h3>
+            <a href="rooms.html">Rooms</a>
+            <a href="restaurant.html">Dining</a>
+            <a href="conference.html">Events</a>
+            <a href="index.html#facilities">Facilities</a>
+            <a href="index.html#location">Location</a>
+            <a href="contact.html">Contact</a>
+            <a href="career.html">Career</a>
+          </div>
+          <div class="footer__col">
+            <h3>Getting here</h3>
+            <p class="place"><strong>Hazrat Shahjalal Airport</strong><span>4.7 km · ~15 min drive</span></p>
+            <p class="place"><strong>Gulshan Ladies Park</strong><span>2 min walk</span></p>
+            <p class="place"><strong>The American Club</strong><span>6 min walk</span></p>
+            <p class="place"><strong>United Hospital</strong><span>12 min walk</span></p>
+          </div>
+          <div class="footer__col footer__col--visit">
+            <h3>Visit</h3>
+            <p>House 12, Road 68/A</p>
+            <p>Gulshan-2, Dhaka 1212</p>
+            <p>Bangladesh</p>
+            <a class="gold" href="https://maps.google.com/?q=Hotel+Aristocrat+Inn+House+12+Road+68A+Gulshan+2+Dhaka" target="_blank" rel="noopener">Open in Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__meta">
+        <p>Gulshan-2, Dhaka’s diplomatic zone  ·  Rated 8.2 / 10 by 56 verified guests</p>
+        <p>© 2026 Hotel Aristocrat Inn  ·  <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></p>
+      </div>
+
+      <p class="footer__word" aria-hidden="true">Aristocrat Inn</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/form-validation.js"></script>
+</body>
+</html>

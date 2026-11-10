@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rooms &amp; suites · Hotel Aristocrat Inn, Gulshan-2</title>
+  <meta name="description" content="Five room types in Gulshan-2, Dhaka, from Deluxe to the Aristocrat Suite. Buffet breakfast, airport pickup and 50 Mbps Wi-Fi included with every stay.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;1,400&family=Inter:wght@500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/rooms.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">Aristocrat Inn</a>
+      <nav class="nav" aria-label="Main">
+        <a href="rooms.html" aria-current="page">Rooms</a>
+        <a href="restaurant.html">Restaurant</a>
+        <a href="conference.html">Conference</a>
+        <a href="booking.html">Booking</a>
+        <a href="index.html#facilities">Facilities</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="btn btn--header" href="booking.html">Book your stay</a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <main id="top">
+
+    <!-- ===== Page hero ===== -->
+    <section class="page-hero">
+      <div class="page-hero__inner">
+        <div class="page-hero__bg"><img src="assets/img/cta-bedroom.jpg" alt="" fetchpriority="high"></div>
+        <div class="page-hero__heading">
+          <nav class="crumbs crumbs--light" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Rooms</span></nav>
+          <h1 class="page-hero__title">Rooms &amp; <span class="it-lg">suites</span></h1>
+          <p class="page-hero__lead">Five room types in Gulshan-2’s diplomatic zone. Every stay includes buffet breakfast, airport pickup and 50 Mbps Wi-Fi.</p>
+        </div>
+
+        <form class="booking-bar" action="booking.html" method="get">
+          <div class="booking-bar__fields">
+            <label class="field">
+              <span class="field__label">Check-in</span>
+              <input class="field__input js-date" type="text" name="checkin" placeholder="Add date">
+            </label>
+            <label class="field">
+              <span class="field__label">Check-out</span>
+              <input class="field__input js-date" type="text" name="checkout" placeholder="Add date">
+            </label>
+            <label class="field">
+              <span class="field__label">Guests</span>
+              <select class="field__input" name="guests">
+                <option value="">Add persons</option>
+                <option>1 guest</option>
+                <option>2 guests</option>
+                <option>3 guests</option>
+                <option>4 guests</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field__label">Room type</span>
+              <select class="field__input" name="room">
+                <option value="">Any room</option>
+                <option>Deluxe</option>
+                <option>Super Deluxe</option>
+                <option>Aristocrat Deluxe</option>
+                <option>Aristocrat Deluxe (Twin)</option>
+                <option>Aristocrat Suite</option>
+              </select>
+            </label>
+          </div>
+          <button class="btn btn--primary" type="submit">Check availability</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== Included with every stay ===== -->
+    <section class="included">
+      <div class="wrap">
+        <div class="included__intro">
+          <p class="eyebrow">included with every stay</p>
+          <h2 class="h-sub">More than <span class="it">a room</span></h2>
+        </div>
+        <ul class="checklist">
+          <li><img src="assets/icons/rooms-check.svg" width="20" height="20" alt="">Buffet breakfast at the rooftop restaurant</li>
+          <li><img src="assets/icons/rooms-check.svg" width="20" height="20" alt="">Welcome drink, flower &amp; fruit basket</li>
+          <li><img src="assets/icons/rooms-check.svg" width="20" height="20" alt="">Free airport pickup</li>
+          <li><img src="assets/icons/rooms-check.svg" width="20" height="20" alt="">Free newspaper</li>
+          <li><img src="assets/icons/rooms-check.svg" width="20" height="20" alt="">Wi-Fi up to 50 Mbps</li>
+          <li><img src="assets/icons/rooms-check.svg" width="20" height="20" alt="">24-hour doctor on call</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Room list ===== -->
+    <section class="room-list" id="room-list">
+      <div class="wrap">
+        <div class="room-list__head">
+          <h2 class="h-sub">Choose your <span class="it">room</span></h2>
+          <p>5 room types &nbsp;·&nbsp; prices per room per night, breakfast included</p>
+        </div>
+
+        <article class="room-row" id="deluxe">
+          <div class="room-row__img"><img src="assets/img/room-deluxe.jpg" alt="Deluxe room with a large bed" loading="lazy"></div>
+          <div class="room-row__details">
+            <p class="room-row__num">01 / 05</p>
+            <h3 class="room-row__name"><span class="it">Deluxe</span></h3>
+            <p class="room-row__desc">A calm, well-priced base in Gulshan-2 with a large bed, a work desk and everything you need for a short stay.</p>
+            <dl class="specs">
+              <div><dt>Bed</dt><dd>Large bed</dd></div>
+              <div><dt>Ideal for</dt><dd>Short stays · solo travellers</dd></div>
+            </dl>
+            <div class="room-row__foot">
+              <div class="price">
+                <p class="price__from">FROM</p>
+                <p class="price__amount">BDT 6,500</p>
+                <p class="price__note">per night · incl. buffet breakfast</p>
+              </div>
+              <div class="room-row__actions">
+                <a class="btn btn--outline" href="booking.html?room=Deluxe">View room details</a>
+                <a class="btn btn--primary" href="booking.html?room=Deluxe">Book this room</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="room-row" id="super-deluxe">
+          <div class="room-row__img"><img src="assets/img/room-super-deluxe.jpg" alt="Super Deluxe room with a king-size bed" loading="lazy"></div>
+          <div class="room-row__details">
+            <p class="room-row__num">02 / 05</p>
+            <h3 class="room-row__name">Super <span class="it">Deluxe</span></h3>
+            <p class="room-row__desc">More room to settle in, with a king-size bed and warm, quiet interiors – a comfortable choice for longer trips.</p>
+            <dl class="specs">
+              <div><dt>Bed</dt><dd>King-size bed</dd></div>
+              <div><dt>Ideal for</dt><dd>Longer stays · couples</dd></div>
+            </dl>
+            <div class="room-row__foot">
+              <div class="price">
+                <p class="price__from">FROM</p>
+                <p class="price__amount">BDT 7,500</p>
+                <p class="price__note">per night · incl. buffet breakfast</p>
+              </div>
+              <div class="room-row__actions">
+                <a class="btn btn--outline" href="booking.html?room=Super+Deluxe">View room details</a>
+                <a class="btn btn--primary" href="booking.html?room=Super+Deluxe">Book this room</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="room-row" id="aristocrat-deluxe">
+          <a class="room-row__img" href="room-aristocrat-deluxe.html" aria-label="View Aristocrat Deluxe room details"><img src="assets/img/room-aristocrat-deluxe.jpg" alt="Aristocrat Deluxe room with a large king-size bed" loading="lazy"></a>
+          <div class="room-row__details">
+            <p class="room-row__num">03 / 05</p>
+            <h3 class="room-row__name"><a href="room-aristocrat-deluxe.html">Aristocrat <span class="it">Deluxe</span></a></h3>
+            <p class="room-row__desc">Our signature room, with a large king-size bed, a proper work desk and elegant interiors. Some rooms overlook the city greenery.</p>
+            <dl class="specs">
+              <div><dt>Bed</dt><dd>Large king-size bed</dd></div>
+              <div><dt>Ideal for</dt><dd>Business stays · couples</dd></div>
+            </dl>
+            <div class="room-row__foot">
+              <div class="price">
+                <p class="price__from">FROM</p>
+                <p class="price__amount">BDT 8,500</p>
+                <p class="price__note">per night · incl. buffet breakfast</p>
+              </div>
+              <div class="room-row__actions">
+                <a class="btn btn--outline" href="room-aristocrat-deluxe.html">View room details</a>
+                <a class="btn btn--primary" href="booking.html?room=Aristocrat+Deluxe">Book this room</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="room-row" id="aristocrat-deluxe-twin">
+          <div class="room-row__img"><img src="assets/img/room-aristocrat-twin.jpg" alt="Aristocrat Deluxe Twin room with two beds" loading="lazy"></div>
+          <div class="room-row__details">
+            <p class="room-row__num">04 / 05</p>
+            <h3 class="room-row__name">Aristocrat Deluxe <span class="it">(Twin)</span></h3>
+            <p class="room-row__desc">Two beds in one spacious room – ideal for colleagues or friends travelling together.</p>
+            <dl class="specs">
+              <div><dt>Bed</dt><dd>Two beds</dd></div>
+              <div><dt>Ideal for</dt><dd>Colleagues · friends</dd></div>
+            </dl>
+            <div class="room-row__foot">
+              <div class="price">
+                <p class="price__from">FROM</p>
+                <p class="price__amount">BDT 9,000</p>
+                <p class="price__note">per night · incl. buffet breakfast</p>
+              </div>
+              <div class="room-row__actions">
+                <a class="btn btn--outline" href="booking.html?room=Aristocrat+Deluxe+%28Twin%29">View room details</a>
+                <a class="btn btn--primary" href="booking.html?room=Aristocrat+Deluxe+%28Twin%29">Book this room</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="room-row" id="aristocrat-suite">
+          <div class="room-row__img"><img class="pos-suite" src="assets/img/room-aristocrat-suite.jpg" alt="Aristocrat Suite sitting area" loading="lazy"></div>
+          <div class="room-row__details">
+            <p class="room-row__num">05 / 05</p>
+            <h3 class="room-row__name">Aristocrat <span class="it">Suite</span></h3>
+            <p class="room-row__desc">Our largest room, with a separate sitting area for a small meeting, a family evening or simply more space.</p>
+            <dl class="specs">
+              <div><dt>Bed</dt><dd>King-size bed · sitting area</dd></div>
+              <div><dt>Ideal for</dt><dd>Families · small meetings</dd></div>
+            </dl>
+            <div class="room-row__foot">
+              <div class="price">
+                <p class="price__from">FROM</p>
+                <p class="price__amount">BDT 12,000</p>
+                <p class="price__note">per night · incl. buffet breakfast</p>
+              </div>
+              <div class="room-row__actions">
+                <a class="btn btn--outline" href="booking.html?room=Aristocrat+Suite">View room details</a>
+                <a class="btn btn--primary" href="booking.html?room=Aristocrat+Suite">Book this room</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Compare rooms ===== -->
+    <section class="compare tint">
+      <div class="wrap">
+        <div class="block-head">
+          <p class="eyebrow">compare at a glance</p>
+          <h2 class="h-sub">Find the right <span class="it">room</span></h2>
+          <p class="block-head__lead">All rooms include buffet breakfast, Wi-Fi, a welcome drink and fruit basket, and free airport pickup.</p>
+        </div>
+        <div class="compare__scroll" tabindex="0" role="region" aria-label="Room comparison table">
+          <table class="compare__table">
+            <thead>
+              <tr>
+                <td></td>
+                <th scope="col">Deluxe</th>
+                <th scope="col">Super Deluxe</th>
+                <th scope="col"><a href="room-aristocrat-deluxe.html">Aristocrat Deluxe</a></th>
+                <th scope="col">Aristocrat Deluxe (Twin)</th>
+                <th scope="col">Aristocrat Suite</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Bed</th><td>Large bed</td><td>King-size</td><td>Large king-size</td><td>Two beds</td><td>King-size</td></tr>
+              <tr><th scope="row">Sitting area</th><td>—</td><td>—</td><td>—</td><td>—</td><td>Separate sitting area</td></tr>
+              <tr><th scope="row">Ideal for</th><td>Short stays</td><td>Longer stays</td><td>Business &amp; couples</td><td>Colleagues &amp; friends</td><td>Families &amp; meetings</td></tr>
+              <tr class="compare__price"><th scope="row">From / night</th><td>BDT 6,500</td><td>BDT 7,500</td><td>BDT 8,500</td><td>BDT 9,000</td><td>BDT 12,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== In every room ===== -->
+    <section class="every-room">
+      <div class="wrap">
+        <div class="block-head">
+          <p class="eyebrow">in-room amenities</p>
+          <h2 class="h-sub">In every <span class="it">room</span></h2>
+        </div>
+        <ul class="amenity-grid">
+          <li><img src="assets/icons/rooms-ac.svg" width="28" height="28" alt="">Split air conditioning</li>
+          <li><img src="assets/icons/rooms-tv.svg" width="28" height="28" alt="">32" LED / LCD TV</li>
+          <li><img src="assets/icons/rooms-globe.svg" width="28" height="28" alt="">International channels</li>
+          <li><img src="assets/icons/rooms-minibar.svg" width="28" height="28" alt="">Mini bar</li>
+          <li><img src="assets/icons/rooms-wifi.svg" width="28" height="28" alt="">Wi-Fi up to 50 Mbps</li>
+          <li><img src="assets/icons/rooms-phone.svg" width="28" height="28" alt="">Intercom with local &amp; international dialling</li>
+          <li><img src="assets/icons/rooms-desk.svg" width="28" height="28" alt="">Work desk</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Good to know ===== -->
+    <section class="policies tint">
+      <div class="wrap">
+        <div class="block-head">
+          <p class="eyebrow">before you book</p>
+          <h2 class="h-sub">Good to <span class="it">know</span></h2>
+        </div>
+        <div class="policy-cards">
+          <article class="policy-card">
+            <p class="policy-card__label">CHECK-IN &amp; CHECK-OUT</p>
+            <p class="policy-card__value">12:00 noon</p>
+            <p class="policy-card__text">Early arrival is guaranteed only when the room is reserved from the previous night.</p>
+          </article>
+          <article class="policy-card">
+            <p class="policy-card__label">LATE CHECK-OUT</p>
+            <p class="policy-card__value">On request</p>
+            <p class="policy-card__text">Check-out after 12:00 noon is chargeable and subject to availability.</p>
+          </article>
+          <article class="policy-card">
+            <p class="policy-card__label">CANCELLATION</p>
+            <p class="policy-card__value">Free up to 24 hours</p>
+            <p class="policy-card__text">Cancel at least 24 hours before arrival. Otherwise, one night’s room charge applies for a no-show.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA banner ===== -->
+    <section class="cta">
+      <div class="cta__bg"><img src="assets/img/cta-bedroom.jpg" alt="" loading="lazy"></div>
+      <div class="cta__content">
+        <div>
+          <h2 class="cta__title">Your room in Gulshan-2, <span class="it">ready when you land</span></h2>
+          <p class="cta__sub" style="margin-inline:auto">Send us your dates and flight number. We’ll confirm your room and have a driver waiting for you at Hazrat Shahjalal Airport.</p>
+        </div>
+        <div class="cta__actions">
+          <a class="btn btn--light btn--lg" href="booking.html">Book your stay</a>
+          <a class="btn btn--ghost-light btn--lg" href="https://wa.me/8801817019200" target="_blank" rel="noopener">WhatsApp us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="contact">
+    <div class="wrap">
+      <div class="footer__top">
+        <div class="panel">
+          <h2>Plan your stay <span class="it-lg">with us</span></h2>
+          <div class="contact-list">
+            <a href="tel:+8801817019200"><span>Call</span><span>+880 1817 019200  →</span></a>
+            <a href="https://wa.me/8801817019200" target="_blank" rel="noopener"><span>WhatsApp</span><span>+880 1817 019200  →</span></a>
+            <a href="mailto:a_inn@hotmail.com"><span>Email</span><span>a_inn@hotmail.com  →</span></a>
+          </div>
+        </div>
+
+        <div class="panel footer__cols">
+          <div class="footer__col footer__col--explore">
+            <h3>Explore</h3>
+            <a href="rooms.html">Rooms</a>
+            <a href="restaurant.html">Dining</a>
+            <a href="conference.html">Events</a>
+            <a href="index.html#facilities">Facilities</a>
+            <a href="index.html#location">Location</a>
+            <a href="contact.html">Contact</a>
+            <a href="career.html">Career</a>
+          </div>
+          <div class="footer__col">
+            <h3>Getting here</h3>
+            <p class="place"><strong>Hazrat Shahjalal Airport</strong><span>4.7 km · ~15 min drive</span></p>
+            <p class="place"><strong>Gulshan Ladies Park</strong><span>2 min walk</span></p>
+            <p class="place"><strong>The American Club</strong><span>6 min walk</span></p>
+            <p class="place"><strong>United Hospital</strong><span>12 min walk</span></p>
+          </div>
+          <div class="footer__col footer__col--visit">
+            <h3>Visit</h3>
+            <p>House 12, Road 68/A</p>
+            <p>Gulshan-2, Dhaka 1212</p>
+            <p>Bangladesh</p>
+            <a class="gold" href="https://maps.google.com/?q=Hotel+Aristocrat+Inn+House+12+Road+68A+Gulshan+2+Dhaka" target="_blank" rel="noopener">Open in Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__meta">
+        <p>Gulshan-2, Dhaka’s diplomatic zone  ·  Rated 8.2 / 10 by 56 verified guests</p>
+        <p>© 2026 Hotel Aristocrat Inn  ·  <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></p>
+      </div>
+
+      <p class="footer__word" aria-hidden="true">Aristocrat Inn</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+/* Shared form fields (Contact + Career) — ported from reference/css/form-fields.css, scoped to those pages */
+:is(.page-contact, .page-career) {
+  /* ==========================================================================
+     Form fields (Contact + Career forms)
+     Figma: white box, 1px #e3dcd1 border, 12px label above a 16px value
+     ========================================================================== */
+  .f-form[hidden] { display: none; }
+  .f-form { display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+  .f-form > .f-wrap, .f-form > .f-row { width: 100%; }
+  .f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; align-items: start; }
+  .f-wrap { min-width: 0; }
+
+  .f-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 16px;
+    background: #fff;
+    border: 1px solid var(--line-warm);
+    border-radius: 4px;
+    cursor: text;
+    transition: border-color .2s, box-shadow .2s;
+  }
+  .f-field:hover { border-color: #cfc5b6; }
+  .f-field:focus-within { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(122, 35, 40, .12); }
+  .f-field__label { font-size: 12px; font-weight: 500; line-height: normal; color: var(--body-warm); }
+  .f-field__input {
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    font: inherit;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--ink);
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  /* Figma: single-line placeholders are set in ink (#141210), the message placeholder in #5c5650 */
+  .f-field__input::placeholder { color: var(--ink); opacity: 1; }
+  textarea.f-field__input::placeholder { color: var(--body-warm); }
+  textarea.f-field__input { resize: vertical; min-height: 115px; }
+  .f-field--select { cursor: pointer; }
+  /* Figma shows the caret right after the value ("Room booking ▾"), not pinned to the box edge */
+  .f-select { display: inline-flex; align-self: flex-start; align-items: baseline; gap: 4px; max-width: 100%; }
+  .f-select::after { content: "▾"; font-size: 16px; line-height: 19px; color: var(--ink); pointer-events: none; }
+  .f-field--select .f-field__input { width: auto; max-width: 100%; field-sizing: content; cursor: pointer; text-overflow: ellipsis; }
+
+  /* Errors */
+  .f-field.is-invalid { border-color: #b3261e; }
+  .f-field.is-invalid:focus-within { box-shadow: 0 0 0 3px rgba(179, 38, 30, .14); }
+  .f-error { margin-top: 6px; font-size: 13px; line-height: 1.35; color: #b3261e; }
+  .f-error::before { content: "! "; font-weight: 500; }
+
+  .f-note { font-size: 14px; color: var(--body-warm); }
+
+  /* Confirmation shown after a valid submit (no backend yet) */
+  .f-success {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 32px 28px;
+    background: var(--soft);
+    border: 1px solid var(--line-warm);
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--body-warm);
+    outline: none;
+  }
+  .f-success[hidden] { display: none; }
+  .f-success__title { font-size: 30px; line-height: 1.15; letter-spacing: -0.01em; color: var(--ink); }
+  .f-success a { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+
+  /* Shared page helpers */
+  .h-sub {
+    font-size: clamp(38px, 3.9vw, 56px);
+    line-height: normal;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .crumbs { display: flex; gap: 8px; font-size: 14px; font-weight: 500; color: var(--body-warm); }
+  .crumbs a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .crumbs--light { color: #e8e2d8; }
+
+  @media (max-width: 760px) {
+    .f-row { grid-template-columns: 1fr; gap: 16px; }
+    .f-success__title { font-size: 26px; }
+  }
+}

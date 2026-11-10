@@ -1,0 +1,38 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "files": [
+          "css/style.css"
+        ],
+        "createdAt": "2026-11-10T03:14:06.497Z",
+        "reason": "Figma design: map address label 103:3716 is set in Inter Medium"
+      },
+      {
+        "rule": "overused-font",
+        "value": "instrument serif",
+        "createdAt": "2026-11-10T03:20:51.218Z",
+        "reason": "Figma design system fonts: Instrument Serif italic accents throughout the user's design"
+      },
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-11-10T03:20:51.238Z",
+        "reason": "Figma design: Inter used in the map address label in the user's design"
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "app/globals.css"
+        ],
+        "createdAt": "2026-11-10T03:55:47.011Z",
+        "reason": "Figma design: footer wordmark 79:2016 uses this exact gradient-clipped text (moved from css/style.css)"
+      }
+    ]
+  }
+}

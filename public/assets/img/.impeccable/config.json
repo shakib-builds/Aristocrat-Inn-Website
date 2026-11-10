@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "css/style.css"
+        ],
+        "createdAt": "2026-11-10T03:11:22.293Z",
+        "reason": "Figma design: footer wordmark 79:2016 uses this exact gradient-clipped text"
+      }
+    ]
+  }
+}

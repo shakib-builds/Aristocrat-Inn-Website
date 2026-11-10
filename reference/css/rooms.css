@@ -1,0 +1,209 @@
+/* ==========================================================================
+   Rooms page (rooms.html) — also provides helpers used by room detail pages
+   Figma: "Rooms Page – Desktop" (82:27)
+   ========================================================================== */
+
+/* ---------- Shared helpers ---------- */
+.tint { background: var(--soft); }
+
+/* 48px subsection heading with a 52px serif accent */
+.h-sub {
+  font-size: clamp(34px, 3.35vw, 48px);
+  line-height: normal;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.h-sub .it { font-size: 1.083em; line-height: normal; }
+
+.block-head { display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px; }
+.block-head .eyebrow, .included .eyebrow { line-height: 24px; } /* Figma eyebrow box is 24px tall */
+.block-head__lead { max-width: 720px; font-size: 18px; line-height: 1.5; color: var(--body-warm); }
+
+.crumbs { display: flex; flex-wrap: wrap; gap: 8px; font-size: 14px; font-weight: 500; color: var(--body-warm); }
+.crumbs a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.crumbs--light { color: #e8e2d8; }
+
+.nav a[aria-current="page"]::after { transform: scaleX(1); }
+
+.checklist li { display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--ink); }
+.checklist img { width: 20px; height: 20px; flex-shrink: 0; }
+
+/* ---------- Page hero ---------- */
+.page-hero { padding-inline: 16px; }
+.page-hero__inner {
+  position: relative;
+  max-width: calc(var(--max) - 32px);
+  margin-inline: auto;
+  min-height: 600px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 40px;
+  overflow: hidden;
+  background: #d8cfc6;
+  color: #fff;
+}
+.page-hero__bg { position: absolute; inset: 0; }
+.page-hero__bg img { width: 100%; height: 100%; object-fit: cover; }
+.page-hero__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,.15) 20%, rgba(15,13,10,.8));
+}
+.page-hero__heading { position: relative; display: flex; flex-direction: column; gap: 16px; }
+.page-hero__title { font-size: clamp(52px, 6.1vw, 88px); line-height: 1; letter-spacing: -0.02em; }
+.page-hero__lead { max-width: 760px; font-size: clamp(17px, 1.4vw, 20px); line-height: 1.45; color: #f0ebe3; }
+.page-hero .booking-bar { position: relative; }
+
+/* ---------- Included with every stay ---------- */
+.included { background: var(--soft); padding-block: 56px; }
+.included .wrap { display: flex; gap: 48px; align-items: flex-start; }
+.included__intro { width: 520px; flex-shrink: 0; display: flex; flex-direction: column; gap: 16px; }
+.included .checklist { flex: 1; min-width: 0; display: grid; grid-template-columns: 1fr 1fr; }
+.included .checklist li { padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line-warm); }
+
+/* ---------- Room list ---------- */
+.room-list { padding-block: 100px; }
+.room-list__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 32px;
+}
+.room-list__head p { font-size: 15px; color: var(--body-warm); }
+
+.room-row {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding-block: 40px;
+  border-top: 1px solid var(--line-warm);
+}
+.room-row:last-child { border-bottom: 1px solid var(--line-warm); }
+.room-row__img {
+  display: block;
+  width: 520px;
+  flex-shrink: 0;
+  aspect-ratio: 520 / 360;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--beige);
+}
+.room-row__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.room-row:hover .room-row__img img { transform: scale(1.03); }
+.pos-suite { object-position: center 62%; }
+
+.room-row__details { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.room-row__num { font-size: 13px; font-weight: 500; letter-spacing: .06em; color: var(--gold); }
+.room-row__name { font-size: clamp(34px, 3.05vw, 44px); line-height: normal; letter-spacing: -0.02em; color: var(--ink); }
+.room-row__name .it { font-size: 1.09em; line-height: normal; }
+.room-row__name a:hover { color: var(--primary); }
+.room-row__desc { font-size: 17px; line-height: 1.55; color: var(--body-warm); }
+
+.specs { margin: 0; font-size: 14px; }
+.specs div { display: flex; justify-content: space-between; gap: 16px; padding-block: 10px; border-top: 1px solid var(--line-warm); }
+.specs dt { color: var(--body-warm); }
+.specs dd { margin: 0; font-weight: 500; color: var(--ink); text-align: right; }
+
+.room-row__foot { display: flex; align-items: center; justify-content: space-between; gap: 16px 24px; padding-top: 8px; flex-wrap: wrap; }
+.price { display: flex; flex-direction: column; gap: 2px; }
+.price__from { font-size: 12px; font-weight: 500; color: var(--body-warm); }
+.price__amount { font-size: 32px; letter-spacing: -0.02em; color: var(--ink); }
+.price__note { font-size: 13px; color: var(--body-warm); }
+.room-row__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ---------- Compare ---------- */
+.compare { padding-block: 80px; }
+.compare__scroll { overflow-x: auto; border-radius: 6px; background: #fff; }
+.compare__table { width: 100%; min-width: 900px; border-collapse: collapse; table-layout: fixed; text-align: left; }
+.compare__table th, .compare__table td {
+  padding: 18px 16px 18px 24px;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line-warm);
+  vertical-align: top;
+}
+.compare__table thead > tr > :first-child, .compare__table tbody th { width: 200px; }
+.compare__table thead th { font-size: 16px; font-weight: 500; }
+.compare__table thead a { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: text-decoration-color .2s; }
+.compare__table thead a:hover { text-decoration-color: currentColor; color: var(--primary); }
+.compare__table tbody th { font-weight: 500; color: var(--body-warm); }
+.compare__table tbody tr:last-child > * { border-bottom: 0; }
+.compare__price td { font-weight: 500; }
+
+/* ---------- In every room ---------- */
+.every-room { padding-block: 100px; }
+.amenity-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 16px; }
+.amenity-grid li {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px 20px;
+  border-radius: 4px;
+  background: var(--soft);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--ink);
+}
+.amenity-grid img { width: 28px; height: 28px; }
+
+/* ---------- Good to know ---------- */
+.policies { padding-block: 80px; }
+.policy-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.policy-card { display: flex; flex-direction: column; gap: 12px; padding: 32px 28px; border-radius: 4px; background: #fff; }
+.policy-card__label { font-size: 12px; font-weight: 500; color: var(--gold); }
+.policy-card__value { font-size: 30px; letter-spacing: -0.02em; color: var(--ink); }
+.policy-card__text { font-size: 15px; line-height: 1.5; color: var(--body-warm); }
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 1280px) {
+  .room-row__img { width: 42%; }
+  .room-row { gap: 40px; }
+  .amenity-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 1100px) {
+  .included .wrap { flex-direction: column; gap: 24px; }
+  .included__intro { width: auto; }
+  .room-row { flex-direction: column; align-items: stretch; gap: 28px; }
+  .room-row__img { width: 100%; }
+  .policy-cards { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  .page-hero { padding-inline: 0; }
+  .page-hero__inner { min-height: 0; padding: 160px 20px 24px; gap: 28px; }
+
+  .included { padding-block: 48px; }
+  .included .checklist { grid-template-columns: 1fr; }
+
+  .room-list, .every-room { padding-block: 72px; }
+  .compare, .policies { padding-block: 64px; }
+  .block-head { margin-bottom: 32px; }
+  .room-list__head { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .room-row__img { aspect-ratio: 4 / 3; }
+  .room-row__actions, .room-row__actions .btn { width: 100%; }
+  .price__amount { font-size: 28px; }
+
+  .compare__table { min-width: 860px; }
+  .compare__table th, .compare__table td { padding: 16px 12px 16px 16px; font-size: 14px; }
+  .compare__table thead > tr > :first-child, .compare__table tbody th {
+    width: 120px;
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: #fff;
+    box-shadow: 1px 0 0 var(--line-warm);
+  }
+
+  .amenity-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .policy-card { padding: 24px 20px; }
+  .policy-card__value { font-size: 26px; }
+}

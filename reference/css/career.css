@@ -1,0 +1,127 @@
+/* ==========================================================================
+   Career page — Figma frame 98:413 "Career Page – Desktop"
+   ========================================================================== */
+
+.k-head { display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+
+/* ---------- Page hero ---------- */
+.k-hero { padding: 80px 0 88px; }
+.k-hero .wrap { display: flex; align-items: center; gap: 64px; }
+.k-hero__text { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
+.k-hero__title { font-size: clamp(44px, 5vw, 72px); line-height: normal; letter-spacing: -0.02em; color: var(--ink); }
+.k-hero__lead { font-size: clamp(17px, 1.35vw, 19px); line-height: 1.55; color: var(--body-warm); }
+.k-hero__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.k-hero__img { width: 620px; flex-shrink: 0; aspect-ratio: 620 / 560; border-radius: 4px; overflow: hidden; background: var(--beige); }
+.k-hero__img img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---------- Why join us ---------- */
+.k-why { background: var(--soft); padding-block: 110px; }
+.k-why .wrap { display: flex; flex-direction: column; gap: 48px; }
+.k-reasons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.k-reason {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 32px 28px;
+  background: #fff;
+  border-radius: 6px;
+}
+.k-reason__num { font-size: 14px; font-weight: 500; color: var(--gold); }
+.k-reason__title { font-size: 22px; color: var(--ink); }
+.k-reason__text { font-size: 15px; line-height: 1.55; color: var(--body-warm); }
+
+/* ---------- Open positions ---------- */
+.k-positions { padding: 110px 0 100px; }
+.k-positions .wrap { display: flex; flex-direction: column; gap: 32px; }
+.k-jobs { border-bottom: 1px solid var(--line-warm); }
+.k-job {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-block: 24px;
+  border-top: 1px solid var(--line-warm);
+}
+.k-job__title { flex: 1; min-width: 0; font-size: 24px; letter-spacing: -0.01em; color: var(--ink); }
+.k-job__dept { width: 280px; flex-shrink: 0; font-size: 15px; color: var(--body-warm); }
+.k-job__type { width: 200px; flex-shrink: 0; font-size: 15px; color: var(--body-warm); white-space: pre; }
+.k-job__apply { flex-shrink: 0; }
+
+/* ---------- Apply ---------- */
+.k-apply { background: var(--soft); padding: 110px 0 120px; }
+.k-apply .wrap { display: flex; align-items: flex-start; gap: 80px; }
+.k-apply__info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
+.k-apply__lead { font-size: 18px; line-height: 1.55; color: var(--body-warm); }
+.k-apply__mail { font-size: 16px; line-height: 19px; font-weight: 500; color: var(--ink); }
+.k-apply__mail a { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: text-decoration-color .2s; }
+.k-apply__mail a:hover { text-decoration-color: currentColor; }
+.k-apply__card {
+  width: 560px;
+  flex-shrink: 0;
+  padding: 36px 32px;
+  background: #fff;
+  border: 1px solid var(--line-warm);
+  border-radius: 6px;
+}
+.k-apply__card .f-success { background: #fff; border: 0; padding: 0; }
+.k-apply__card textarea.f-field__input { min-height: 63px; }
+.k-apply__submit { width: 100%; }
+
+/* CV upload drop area */
+.f-upload {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px 12px;
+  padding: 28px 16px;
+  background: var(--soft);
+  border: 1px dashed #c9bfaf;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color .2s, background-color .2s;
+}
+.f-upload:hover { border-color: var(--gold); background: #f2f0ec; }
+.f-upload:focus-within { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(122, 35, 40, .12); }
+.f-upload input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+.f-upload__title { font-size: 16px; line-height: 19px; font-weight: 500; color: var(--ink); }
+.f-upload__hint { font-size: 14px; color: var(--body-warm); }
+.f-upload__file { flex-basis: 100%; font-size: 14px; font-weight: 500; color: var(--primary); overflow-wrap: anywhere; }
+.f-upload__file:empty { display: none; }
+.f-upload.is-invalid { border-color: #b3261e; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1280px) {
+  .k-hero__img { width: 46%; }
+  .k-apply .wrap { gap: 48px; }
+  .k-apply__card { width: 50%; }
+  .k-job__dept { width: 220px; }
+  .k-job__type { width: 180px; }
+}
+
+@media (max-width: 1100px) {
+  .k-hero .wrap { flex-direction: column; align-items: stretch; gap: 40px; }
+  .k-hero__img { width: 100%; aspect-ratio: 4 / 3; }
+  .k-reasons { grid-template-columns: 1fr 1fr; }
+  .k-apply .wrap { flex-direction: column; }
+  .k-apply__card { width: 100%; }
+  .k-job { flex-wrap: wrap; gap: 6px 24px; }
+  .k-job__title { flex-basis: 100%; }
+  .k-job__dept, .k-job__type { width: auto; }
+  .k-job__apply { margin-left: auto; }
+}
+
+@media (max-width: 760px) {
+  .k-hero { padding: 40px 0 56px; }
+  .k-why, .k-positions { padding-block: 64px; }
+  .k-apply { padding-block: 64px 72px; }
+  .k-why .wrap { gap: 32px; }
+  .k-reasons { grid-template-columns: 1fr; gap: 12px; }
+  .k-reason { padding: 24px 20px; }
+  .k-job { display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; padding-block: 20px; }
+  .k-job__title, .k-job__dept, .k-job__type { grid-column: 1; }
+  .k-job__apply { grid-column: 2; grid-row: 1 / span 3; align-self: center; margin-left: 0; }
+  .k-job__title { font-size: 21px; }
+  .k-apply__card { padding: 24px 16px; }
+}

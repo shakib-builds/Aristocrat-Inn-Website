@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Home page only — Figma frame 79:1530 "Landing Page - Final Version"
+   (port of reference/css/home.css, scoped to <main class="page-home">)
+   ========================================================================== */
+
+.page-home {
+  /* ---------- Hero: photo frame is 1442 × 961 at (-17, -123) inside the
+     1408 × 760 hero box, and the dark gradient spans that whole frame ---------- */
+  .hero__bg {
+    inset: auto;
+    left: -1.207%;
+    top: -16.184%;
+    width: 102.415%;
+    height: 126.491%;
+  }
+  .hero__bg img { object-position: center; }
+
+  /* ---------- Rooms: heading uses line-height normal (101px tall block) ---------- */
+  .rooms__head .h-display { line-height: normal; }
+
+  /* ---------- Dining: each photo frame is 480px tall, centred in the 420px row
+     (30px cropped top and bottom) ---------- */
+  .dining-row__imgs img {
+    position: absolute;
+    left: 0;
+    top: -7.143%;
+    width: 100%;
+    height: 114.286%;
+    max-width: none;
+  }
+  /* Banquet hall: 424 × 530 at (-4, -20) inside the 383.5 × 480 frame */
+  .dining-row__imgs img.pos-banquet-hall {
+    left: -1.043%;
+    top: -11.905%;
+    width: 110.561%;
+    height: 126.19%;
+  }
+  /* Banquet table: 422 × 528 at (0, -24) */
+  .dining-row__imgs img.pos-banquet-table {
+    left: 0;
+    top: -12.857%;
+    width: 110.039%;
+    height: 125.714%;
+  }
+  .dining-row__imgs figure.shade-13::after { background: rgba(0, 0, 0, .13); }
+  /* Lobby: 1031px-wide frame at x = -340; balcony: 750px at x = -96 */
+  .pos-lobby { object-position: 52.51% center; }
+  .pos-balcony { object-position: 26.19% center; }
+
+  /* ---------- Facilities: "also at your service" wraps after "Safety lockers"
+     as in Figma (836px row, ISD chip falls to line two) ---------- */
+  .also { max-width: 830px; }
+}
