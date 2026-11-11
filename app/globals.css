@@ -203,12 +203,12 @@ main { padding-top: var(--header-h); }
 /* ==========================================================================
    Hero
    ========================================================================== */
-.hero { padding-inline: 16px; }
+.hero { padding-inline: 0; }
 .hero__inner {
   position: relative;
   margin-inline: auto;
   min-height: 760px;
-  padding: 160px 32px 40px;
+  padding: 160px 48px 40px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

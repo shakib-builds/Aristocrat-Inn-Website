@@ -14,12 +14,12 @@
   .h-gallery .it { font-size: 1.08em; }
 
   /* Page hero */
-  .page-hero { padding-inline: 16px; }
+  .page-hero { padding-inline: 0; }
   .page-hero__inner {
     position: relative;
     min-height: 600px;
     margin-inline: auto;
-    padding: 48px 48px 56px;
+    padding: 48px 64px 56px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

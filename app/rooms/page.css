@@ -29,12 +29,12 @@
   .checklist img { width: 20px; height: 20px; flex-shrink: 0; }
 
   /* ---------- Page hero ---------- */
-  .page-hero { padding-inline: 16px; }
+  .page-hero { padding-inline: 0; }
   .page-hero__inner {
     position: relative;
     margin-inline: auto;
     min-height: 600px;
-    padding: 32px;
+    padding: 32px 48px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
