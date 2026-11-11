@@ -339,7 +339,7 @@ main { padding-top: var(--header-h); }
 .room__img--tall { aspect-ratio: 430 / 540; }
 .room__img--mid { aspect-ratio: 430 / 420; }
 .room__img--wide { aspect-ratio: 663 / 440; }
-.room__img--suite img { object-position: center 62%; }
+.room__img--suite img { object-position: center; }
 
 .room__title { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
 .room__name { display: flex; align-items: baseline; gap: 14px; }
