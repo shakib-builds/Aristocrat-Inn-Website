@@ -7,6 +7,7 @@ import { Parallax, Reveal, RevealText, Stagger, StaggerItem } from "@/components
 import { Fade, StaggerGroup, StaggerRow } from "@/components/rooms/motion-bits";
 import RoomRow, { type Room } from "@/components/rooms/RoomRow";
 import { bookRoomHref } from "@/lib/site";
+import { roomHref } from "@/lib/rooms";
 import heroImg from "@/public/assets/img/cta-bedroom.jpg";
 import roomDeluxe from "@/public/assets/img/room-deluxe.jpg";
 import roomSuperDeluxe from "@/public/assets/img/room-super-deluxe.jpg";
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     "Five room types in Gulshan-2’s diplomatic zone. Every stay includes buffet breakfast, airport pickup and 50 Mbps Wi-Fi.",
 };
 
-const DETAIL_HREF = "/rooms/aristocrat-deluxe";
+const DETAIL_HREF = roomHref("aristocrat-deluxe");
 
 const INCLUDED = [
   "Buffet breakfast at the rooftop restaurant",
@@ -43,7 +44,7 @@ const ROOMS: Room[] = [
     bed: "Large bed",
     idealFor: "Short stays · solo travellers",
     price: "BDT 6,500",
-    detailsHref: bookRoomHref("Deluxe"),
+    detailsHref: roomHref("deluxe"),
     bookHref: bookRoomHref("Deluxe"),
   },
   {
@@ -56,7 +57,7 @@ const ROOMS: Room[] = [
     bed: "King-size bed",
     idealFor: "Longer stays · couples",
     price: "BDT 7,500",
-    detailsHref: bookRoomHref("Super Deluxe"),
+    detailsHref: roomHref("super-deluxe"),
     bookHref: bookRoomHref("Super Deluxe"),
   },
   {
@@ -71,7 +72,6 @@ const ROOMS: Room[] = [
     price: "BDT 8,500",
     detailsHref: DETAIL_HREF,
     bookHref: bookRoomHref("Aristocrat Deluxe"),
-    hasDetailPage: true,
   },
   {
     id: "aristocrat-deluxe-twin",
@@ -83,7 +83,7 @@ const ROOMS: Room[] = [
     bed: "Two beds",
     idealFor: "Colleagues · friends",
     price: "BDT 9,000",
-    detailsHref: bookRoomHref("Aristocrat Deluxe (Twin)"),
+    detailsHref: roomHref("aristocrat-deluxe-twin"),
     bookHref: bookRoomHref("Aristocrat Deluxe (Twin)"),
   },
   {
@@ -97,7 +97,7 @@ const ROOMS: Room[] = [
     bed: "King-size bed · sitting area",
     idealFor: "Families · small meetings",
     price: "BDT 12,000",
-    detailsHref: bookRoomHref("Aristocrat Suite"),
+    detailsHref: roomHref("aristocrat-suite"),
     bookHref: bookRoomHref("Aristocrat Suite"),
   },
 ];
@@ -230,13 +230,21 @@ export default function RoomsPage() {
                 <thead>
                   <StaggerRow>
                     <td></td>
-                    <th scope="col">Deluxe</th>
-                    <th scope="col">Super Deluxe</th>
+                    <th scope="col">
+                      <Link href={roomHref("deluxe")}>Deluxe</Link>
+                    </th>
+                    <th scope="col">
+                      <Link href={roomHref("super-deluxe")}>Super Deluxe</Link>
+                    </th>
                     <th scope="col">
                       <Link href={DETAIL_HREF}>Aristocrat Deluxe</Link>
                     </th>
-                    <th scope="col">Aristocrat Deluxe (Twin)</th>
-                    <th scope="col">Aristocrat Suite</th>
+                    <th scope="col">
+                      <Link href={roomHref("aristocrat-deluxe-twin")}>Aristocrat Deluxe (Twin)</Link>
+                    </th>
+                    <th scope="col">
+                      <Link href={roomHref("aristocrat-suite")}>Aristocrat Suite</Link>
+                    </th>
                   </StaggerRow>
                 </thead>
                 <tbody>

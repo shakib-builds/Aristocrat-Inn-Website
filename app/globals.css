@@ -335,6 +335,8 @@ main { padding-top: var(--header-h); }
 .room--offset-40 { padding-top: 40px; }
 .room--offset-80 { padding-top: 80px; }
 .room--offset-120 { padding-top: 120px; }
+.room__img-link { display: block; border-radius: 4px; }
+.room__img-link:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
 .room__img { overflow: hidden; border-radius: 4px; background: var(--beige); }
 .room__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
 .room:hover .room__img img { transform: scale(1.03); }

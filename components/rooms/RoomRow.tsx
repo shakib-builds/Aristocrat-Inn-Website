@@ -18,8 +18,6 @@ export type Room = {
   /** "View room details" target. */
   detailsHref: string;
   bookHref: string;
-  /** Room has its own detail page: photo + name link to it. */
-  hasDetailPage?: boolean;
 };
 
 const SIZES = "(max-width: 1100px) calc(100vw - 80px), (max-width: 1280px) 42vw, 520px";
@@ -38,23 +36,15 @@ export default function RoomRow({ room }: { room: Room }) {
 
   return (
     <article className="room-row" id={room.id}>
-      {room.hasDetailPage ? (
-        <Link
-          className="room-row__img"
-          href={room.detailsHref}
-          aria-label="View Aristocrat Deluxe room details"
-        >
-          <ImageReveal style={{ position: "absolute", inset: 0 }}>{photo}</ImageReveal>
-        </Link>
-      ) : (
-        <ImageReveal className="room-row__img">{photo}</ImageReveal>
-      )}
+      <Link className="room-row__img" href={room.detailsHref} aria-label={`View room details: ${room.alt}`}>
+        <ImageReveal style={{ position: "absolute", inset: 0 }}>{photo}</ImageReveal>
+      </Link>
       <div className="room-row__details">
         <Reveal as="p" className="room-row__num" y={16}>
           {room.num}
         </Reveal>
         <RevealText as="h3" className="room-row__name" delay={0.05}>
-          {room.hasDetailPage ? <Link href={room.detailsHref}>{room.name}</Link> : room.name}
+          <Link href={room.detailsHref}>{room.name}</Link>
         </RevealText>
         <Reveal as="p" className="room-row__desc" delay={0.1}>
           {room.desc}

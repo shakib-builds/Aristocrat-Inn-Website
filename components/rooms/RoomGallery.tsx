@@ -13,7 +13,9 @@ const MotionImage = motion.create(Image);
 const TILE_SIZES = "(max-width: 760px) 50vw, (max-width: 1100px) 25vw, 268px";
 
 /** Room photo gallery with a full-screen lightbox (← / → / Esc, focus returns to the opener). */
-export default function RoomGallery({ photos }: { photos: Photo[] }) {
+export default function RoomGallery({ photos, imgClassName }: { photos: Photo[]; imgClassName?: string }) {
+  // Rooms without a full set of photos show one wide cover photo instead of the 1 + 4 grid.
+  const single = photos.length < 5;
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
@@ -45,11 +47,12 @@ export default function RoomGallery({ photos }: { photos: Photo[] }) {
     >
       <ImageReveal style={{ position: "absolute", inset: 0 }} delay={i === 0 ? 0 : 0.08 * i}>
         <Image
+          className={i === 0 ? imgClassName : undefined}
           src={photos[i].src}
           alt={photos[i].alt}
           fill
           placeholder="blur"
-          sizes={i === 0 ? "(max-width: 1100px) 100vw, 800px" : TILE_SIZES}
+          sizes={i === 0 ? (single ? "100vw" : "(max-width: 1100px) 100vw, 800px") : TILE_SIZES}
           preload={i === 0}
         />
       </ImageReveal>
@@ -59,9 +62,10 @@ export default function RoomGallery({ photos }: { photos: Photo[] }) {
 
   return (
     <>
-      <section className="rd-gallery" aria-label="Room photos">
+      <section className={single ? "rd-gallery rd-gallery--single" : "rd-gallery"} aria-label="Room photos">
         <div className="wrap">
-          {tile(0, "rd-gallery__item rd-gallery__item--main", `Open photo 1 of ${photos.length}`)}
+          {tile(0, "rd-gallery__item rd-gallery__item--main", single ? "Open photo" : `Open photo 1 of ${photos.length}`)}
+          {!single && (
           <div className="rd-gallery__grid">
             {tile(1, "rd-gallery__item", `Open photo 2 of ${photos.length}`)}
             {tile(2, "rd-gallery__item", `Open photo 3 of ${photos.length}`)}
@@ -73,6 +77,7 @@ export default function RoomGallery({ photos }: { photos: Photo[] }) {
               <span className="rd-gallery__all">View all {photos.length} photos</span>,
             )}
           </div>
+          )}
         </div>
       </section>
 
@@ -148,6 +153,7 @@ function Lightbox({
       <button className="lightbox__close" type="button" aria-label="Close" onClick={onClose}>
         ×
       </button>
+      {photos.length > 1 && (
       <button
         className="lightbox__nav lightbox__nav--prev"
         type="button"
@@ -156,6 +162,7 @@ function Lightbox({
       >
         ‹
       </button>
+      )}
       <motion.figure
         className="lightbox__figure"
         initial={{ scale: 0.94 }}
@@ -182,6 +189,7 @@ function Lightbox({
           {current + 1} / {photos.length}
         </figcaption>
       </motion.figure>
+      {photos.length > 1 && (
       <button
         className="lightbox__nav lightbox__nav--next"
         type="button"
@@ -190,6 +198,7 @@ function Lightbox({
       >
         ›
       </button>
+      )}
     </motion.dialog>
   );
 }

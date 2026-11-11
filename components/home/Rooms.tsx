@@ -2,7 +2,7 @@ import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { ImageReveal, Reveal, RevealText, Stagger, StaggerItem } from "@/components/motion";
-import { bookRoomHref } from "@/lib/site";
+import { ROOMS, roomHref } from "@/lib/rooms";
 import roomDeluxe from "@/public/assets/img/room-deluxe.jpg";
 import roomSuperDeluxe from "@/public/assets/img/room-super-deluxe.jpg";
 import roomAristocratDeluxe from "@/public/assets/img/room-aristocrat-deluxe.jpg";
@@ -96,18 +96,24 @@ const ROW_2: Room[] = [
   },
 ];
 
+/** Each card opens that room's detail page (photo, name and "Book →"). */
+const detailHref = (room: string) => roomHref(ROOMS.find((x) => x.name === room)?.slug ?? "");
+
 function RoomCard({ r, sizes }: { r: Room; sizes: string }) {
+  const href = detailHref(r.room);
   return (
     <StaggerItem as="article" className={r.offset ? `room ${r.offset}` : "room"}>
-      <ImageReveal className={`room__img ${r.imgClass}`} style={{ position: "relative" }}>
-        <Image src={r.img} alt={r.alt} sizes={sizes} placeholder="blur" />
-      </ImageReveal>
+      <Link className="room__img-link" href={href} aria-label={`View ${r.room} room details`}>
+        <ImageReveal className={`room__img ${r.imgClass}`} style={{ position: "relative" }}>
+          <Image src={r.img} alt={r.alt} sizes={sizes} placeholder="blur" />
+        </ImageReveal>
+      </Link>
       <div className="room__title">
         <div className="room__name">
           <span className="room__num">{r.num}</span>
           <h3 className="room__heading">{r.heading}</h3>
         </div>
-        <Link className="room__book" href={bookRoomHref(r.room)}>
+        <Link className="room__book" href={href}>
           Book →
         </Link>
       </div>

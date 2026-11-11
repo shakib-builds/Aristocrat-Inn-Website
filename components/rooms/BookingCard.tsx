@@ -4,21 +4,22 @@ import { onDateBlur, onDateFocus } from "@/components/BookingBar";
 import { Fade } from "@/components/rooms/motion-bits";
 import { WHATSAPP_URL } from "@/lib/site";
 
-const WHATSAPP_ASK = `${WHATSAPP_URL}?text=Hi%2C%20I%27d%20like%20to%20ask%20about%20the%20Aristocrat%20Deluxe%20room.`;
-
 /**
  * Sticky "Book this room" card. Only fades (opacity) so no transform ever
  * lands on the sticky element or its ancestors.
  */
-export default function BookingCard() {
+export default function BookingCard({ room, price }: { room: string; price: string }) {
+  // Encode the apostrophe too, so the server HTML and the browser agree on the URL.
+  const message = encodeURIComponent(`Hi, I'd like to ask about the ${room} room.`).replace(/'/g, "%27");
+  const whatsappAsk = `${WHATSAPP_URL}?text=${message}`;
   return (
     <Fade as="aside" className="rd-card" aria-label="Book this room" delay={0.15}>
       <form action="/booking" method="get">
-        <input type="hidden" name="room" value="Aristocrat Deluxe" />
+        <input type="hidden" name="room" value={room} />
         <div className="price">
           <p className="price__from">FROM</p>
           <p className="rd-card__amount">
-            <span>BDT 8,500</span> <span className="rd-card__per">/ night</span>
+            <span>{price}</span> <span className="rd-card__per">/ night</span>
           </p>
           <p className="rd-card__note">Per room · buffet breakfast included</p>
         </div>
@@ -59,7 +60,7 @@ export default function BookingCard() {
         <button className="btn btn--primary" type="submit">
           Check availability
         </button>
-        <a className="btn btn--outline" href={WHATSAPP_ASK} target="_blank" rel="noopener">
+        <a className="btn btn--outline" href={whatsappAsk} target="_blank" rel="noopener">
           Ask on WhatsApp
         </a>
         <ul className="rd-card__assure">
