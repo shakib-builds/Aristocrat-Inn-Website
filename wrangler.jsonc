@@ -1,7 +1,7 @@
 // Cloudflare settings: publish the static site that `npm run build` writes to `out/`.
 // "name" must match the Worker's name in the Cloudflare dashboard.
 {
-  "name": "fragrant-fog-9629",
+  "name": "aristocrat-inn",
   "compatibility_date": "2026-09-01",
   "assets": {
     "directory": "./out",
