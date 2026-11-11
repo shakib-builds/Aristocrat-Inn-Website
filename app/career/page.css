@@ -7,17 +7,19 @@
   .k-head { display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
 
   /* ---------- Page hero ---------- */
-  .k-hero { padding: 80px 0 88px; }
+  .k-hero { padding-block: 140px; }
   .k-hero .wrap { display: flex; align-items: center; gap: 64px; }
   .k-hero__text { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
-  .k-hero__title { font-size: clamp(44px, 5vw, 72px); line-height: normal; letter-spacing: -0.02em; color: var(--ink); }
+  .k-hero__copy { display: flex; flex-direction: column; gap: 12px; }
+  .k-hero__heading { display: flex; flex-direction: column; gap: 8px; }
+  .k-hero__title { font-size: clamp(44px, 5vw, 72px); line-height: 1; letter-spacing: -0.02em; color: var(--ink); }
   .k-hero__lead { font-size: clamp(17px, 1.35vw, 19px); line-height: 1.55; color: var(--body-warm); }
   .k-hero__actions { display: flex; flex-wrap: wrap; gap: 12px; }
   .k-hero__img { width: 620px; flex-shrink: 0; aspect-ratio: 620 / 560; border-radius: 4px; overflow: hidden; background: var(--beige); }
   .k-hero__img img { width: 100%; height: 100%; object-fit: cover; }
 
   /* ---------- Why join us ---------- */
-  .k-why { background: var(--soft); padding-block: 110px; }
+  .k-why { background: var(--soft); padding-block: 80px; }
   .k-why .wrap { display: flex; flex-direction: column; gap: 48px; }
   .k-reasons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
   .k-reason {
@@ -33,7 +35,7 @@
   .k-reason__text { font-size: 15px; line-height: 1.55; color: var(--body-warm); }
 
   /* ---------- Open positions ---------- */
-  .k-positions { padding: 110px 0 100px; }
+  .k-positions { padding-block: 80px; }
   .k-positions .wrap { display: flex; flex-direction: column; gap: 32px; }
   .k-jobs { border-bottom: 1px solid var(--line-warm); }
   .k-job {
@@ -49,7 +51,7 @@
   .k-job__apply { flex-shrink: 0; }
 
   /* ---------- Apply ---------- */
-  .k-apply { background: var(--soft); padding: 110px 0 120px; }
+  .k-apply { background: var(--soft); padding-block: 80px; }
   .k-apply .wrap { display: flex; align-items: flex-start; gap: 80px; }
   .k-apply__info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
   .k-apply__lead { font-size: 18px; line-height: 1.55; color: var(--body-warm); }
@@ -103,6 +105,7 @@
   }
 
   @media (max-width: 1100px) {
+    .k-hero { padding-block: 80px; }
     .k-hero .wrap { flex-direction: column; align-items: stretch; gap: 40px; }
     .k-hero__img { width: 100%; aspect-ratio: 4 / 3; }
     .k-reasons { grid-template-columns: 1fr 1fr; }

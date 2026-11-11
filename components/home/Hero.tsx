@@ -20,7 +20,10 @@ export default function Hero() {
           <Image src={hero} alt="" sizes="100vw" placeholder="blur" preload fetchPriority="high" />
         </Parallax>
         <div className="hero__content">
-          <div>
+          <div className="hero__text">
+            <FadeIn className="hero__rating" onLoad delay={0.05}>
+              ★ 8.2 / 10 · 56 verified guests
+            </FadeIn>
             <RevealText as="h1" className="hero__title" onLoad delay={0.15}>
               A <span className="it">secure, friendly</span> stay in Gulshan’s diplomatic zone
             </RevealText>
@@ -28,12 +31,11 @@ export default function Hero() {
               <p>
                 Buffet breakfast, airport pickup and WiFi up to 50 Mbps, <em>all included</em>
               </p>
-              <p className="hero__rating">★ 8.2 / 10 · 56 verified guests</p>
             </FadeIn>
           </div>
 
           <FadeIn onLoad delay={0.95} y={24}>
-            <BookingBar />
+            <BookingBar submitLabel="Book" />
             <FadeIn as="ul" className="inclusions" onLoad delay={1.2} y={12}>
               {INCLUSIONS.map((item) => (
                 <li key={item}>{item}</li>

@@ -77,9 +77,6 @@ export default function ContactPage() {
               <a className="c-card__value" href="tel:+8801924304304">
                 +880 1924 304304
               </a>
-              <a className="c-card__value" href="tel:+880222281014">
-                +880 2 222281014
-              </a>
               <a className="c-card__link" href={PHONE_TEL}>
                 Call now →
               </a>

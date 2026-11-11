@@ -46,19 +46,23 @@ export default function CareerPage() {
       <section className="k-hero">
         <div className="wrap">
           <div className="k-hero__text">
-            <nav className="crumbs" aria-label="Breadcrumb">
-              <Link href="/">Home</Link>
-              <span aria-hidden="true">/</span>
-              <span aria-current="page">Career</span>
-            </nav>
-            <RevealText as="h1" className="k-hero__title" onLoad>
-              Build your career in <span className="it-lg">hospitality</span>
-            </RevealText>
-            <Reveal as="p" className="k-hero__lead" delay={0.3}>
-              Join the team behind Hotel Aristocrat Inn in Gulshan-2. We welcome guests from around
-              the world, 24 hours a day – and we’re always looking for warm, reliable people to join
-              us.
-            </Reveal>
+            <div className="k-hero__copy">
+              <nav className="crumbs" aria-label="Breadcrumb">
+                <Link href="/">Home</Link>
+                <span aria-hidden="true">/</span>
+                <span aria-current="page">Career</span>
+              </nav>
+              <div className="k-hero__heading">
+                <RevealText as="h1" className="k-hero__title" onLoad>
+                  Build your career in <span className="it-lg">hospitality</span>
+                </RevealText>
+                <Reveal as="p" className="k-hero__lead" delay={0.3}>
+                  Join the team behind Hotel Aristocrat Inn in Gulshan-2. We welcome guests from
+                  around the world, 24 hours a day – and we’re always looking for warm, reliable
+                  people to join us.
+                </Reveal>
+              </div>
+            </div>
             <Reveal className="k-hero__actions" delay={0.45}>
               <a className="btn btn--primary" href="#positions">
                 See open positions

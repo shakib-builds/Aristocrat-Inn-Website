@@ -18,7 +18,7 @@ function onDateBlur(e: FocusEvent<HTMLInputElement>) {
 }
 
 /** Hero booking bar (Home + Rooms). Submits to /booking with GET params. */
-export default function BookingBar() {
+export default function BookingBar({ submitLabel = "Check availability" }: { submitLabel?: string }) {
   return (
     <form className="booking-bar" action="/booking" method="get">
       <div className="booking-bar__fields">
@@ -65,7 +65,7 @@ export default function BookingBar() {
         </label>
       </div>
       <button className="btn btn--primary" type="submit">
-        Check availability
+        {submitLabel}
       </button>
     </form>
   );

@@ -230,22 +230,19 @@ main { padding-top: var(--header-h); }
   background: linear-gradient(to bottom, rgba(0,0,0,.09), rgba(0,0,0,.9));
 }
 .hero__content { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 35px; }
+.hero__text { display: flex; flex-direction: column; gap: 16px; }
 .hero__title {
   max-width: 900px;
   font-size: clamp(44px, 5.6vw, 80px);
-  line-height: 1.05;
+  line-height: 1;
   letter-spacing: -0.008em;
 }
 .hero__value {
-  margin-top: 16px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 20px;
   font-size: clamp(18px, 1.7vw, 24px);
   letter-spacing: -0.01em;
 }
 .hero__value em { font-style: italic; }
-.hero__rating { font-weight: 500; }
+.hero__rating { font-size: clamp(18px, 1.7vw, 24px); font-weight: 500; }
 
 /* Booking bar */
 .booking-bar {
@@ -388,7 +385,7 @@ main { padding-top: var(--header-h); }
 .arrival-card__step { font-size: 16px; font-weight: 500; color: var(--primary); }
 .arrival-card__title { margin-top: 12px; font-size: 34px; line-height: 1.15; letter-spacing: -0.01em; }
 .arrival-card__title .it { display: block; }
-.arrival-card__text { max-width: 300px; font-size: 18px; line-height: 1.25; letter-spacing: -0.01em; color: var(--body); }
+.arrival-card__text { font-size: 18px; line-height: 1.25; letter-spacing: -0.01em; color: var(--body); }
 .arrival-card__icon {
   position: absolute;
   left: 50%;
@@ -707,7 +704,6 @@ main { padding-top: var(--header-h); }
 
   .hero { padding-inline: 0; }
   .hero__inner { min-height: 0; padding: 200px 20px 24px; }
-  .hero__value { flex-direction: column; }
   .field { flex-basis: 100%; }
   .field:nth-child(even) { border-left: 0; }
   .field:nth-child(n+2) { border-top: 1px solid var(--line); }

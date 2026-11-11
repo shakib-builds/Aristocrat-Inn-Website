@@ -151,12 +151,14 @@ export default function ConferencePage() {
             />
           </ImageReveal>
           <div className="included__text">
-            <Reveal as="p" className="eyebrow">
-              included
-            </Reveal>
-            <RevealText className="h-sub">
-              Everything your event <span className="it">needs</span>
-            </RevealText>
+            <div className="included__head">
+              <Reveal as="p" className="eyebrow">
+                included
+              </Reveal>
+              <RevealText className="h-sub">
+                Everything your event <span className="it">needs</span>
+              </RevealText>
+            </div>
             <Stagger as="ul" className="inc-list" stagger={0.08}>
               {INCLUDED.map(([title, text]) => (
                 <StaggerItem as="li" key={title}>

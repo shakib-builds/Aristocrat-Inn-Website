@@ -31,8 +31,8 @@
   /* ---------- Title area ---------- */
   .rd-title { padding: 24px 0 32px; } /* header is fixed (76px) + main offset: Figma title starts 100px from page top */
   .rd-title .wrap { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px 40px; }
-  .rd-title__heading { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
-  .rd-title__name { font-size: clamp(48px, 5vw, 72px); line-height: normal; letter-spacing: -0.02em; color: var(--ink); }
+  .rd-title__heading { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+  .rd-title__name { font-size: clamp(48px, 5vw, 72px); line-height: 1; letter-spacing: -0.02em; color: var(--ink); }
   .rd-title__lead { font-size: clamp(17px, 1.32vw, 19px); line-height: normal; color: var(--body-warm); }
   .rd-chips { display: flex; flex-wrap: wrap; gap: 10px; flex-shrink: 0; }
   .rd-chips li {

@@ -18,7 +18,7 @@
   .page-hero__inner {
     position: relative;
     max-width: calc(var(--max) - 32px);
-    min-height: 680px;
+    min-height: 600px;
     margin-inline: auto;
     padding: 48px 48px 56px;
     display: flex;
@@ -178,7 +178,7 @@
   .page-hero--restaurant .page-hero__bg img { object-position: center 53%; }
 
   /* Intro */
-  .intro { padding-block: 120px 100px; }
+  .intro { padding-block: 80px; }
   .r-intro__title { font-size: clamp(40px, 4.45vw, 64px); }
   .r-intro__right { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 32px; }
   .facts { display: grid; grid-template-columns: repeat(4, 1fr); }

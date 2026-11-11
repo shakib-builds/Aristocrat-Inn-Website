@@ -59,7 +59,7 @@
   .page-hero .booking-bar { position: relative; }
 
   /* ---------- Included with every stay ---------- */
-  .included { background: var(--soft); padding-block: 56px; }
+  .included { background: var(--soft); padding-block: 44px; }
   .included .wrap { display: flex; gap: 48px; align-items: flex-start; }
   .included__intro { width: 520px; flex-shrink: 0; display: flex; flex-direction: column; gap: 16px; }
   .included .checklist { flex: 1; min-width: 0; display: grid; grid-template-columns: 1fr 1fr; }
