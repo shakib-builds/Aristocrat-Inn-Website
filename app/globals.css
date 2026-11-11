@@ -481,7 +481,7 @@ main { padding-top: var(--header-h); }
 .dining-row__desc { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
 .dining-row__desc p { font-size: 18px; line-height: 1.45; letter-spacing: -0.01em; color: #bdb8b0; }
 .dining-row__imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; height: 420px; }
-.dining-row__imgs figure { margin: 0; position: relative; overflow: hidden; background: var(--beige); }
+.dining-row__imgs figure { margin: 0; position: relative; overflow: hidden; background: #2b2724; } /* dark placeholder: no light hairline at the clipped edge */
 .dining-row__imgs img { width: 100%; height: 100%; object-fit: cover; }
 .dining-row__imgs figure.shade::after { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, .15); }
 .pos-lobby { object-position: 52% center; }
