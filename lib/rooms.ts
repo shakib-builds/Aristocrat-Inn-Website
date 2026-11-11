@@ -8,12 +8,14 @@ import adPhoto4 from "@/public/assets/img/room-aristocrat-deluxe-4.jpg";
 import adPhoto5 from "@/public/assets/img/room-aristocrat-deluxe-5.jpg";
 import roomTwin from "@/public/assets/img/room-aristocrat-twin.jpg";
 import roomSuite from "@/public/assets/img/room-aristocrat-suite.jpg";
+import ctaBedroom from "@/public/assets/img/cta-bedroom.jpg";
+import bookingRoom from "@/public/assets/img/booking-room.jpg";
 
 /**
  * The five room types. One source of truth for the Home rooms grid, the
  * Rooms page and the /rooms/[slug] detail pages.
  *
- * Only Aristocrat Deluxe has a Figma detail design and a 5-photo gallery;
+ * Only Aristocrat Deluxe has a Figma detail design and its own 5-photo set;
  * the other rooms reuse that layout with the facts from the Rooms page.
  */
 export type RoomPhoto = { src: StaticImageData; alt: string };
@@ -43,13 +45,31 @@ export type RoomInfo = {
   bedFeature: string;
 };
 
+/**
+ * Extra guest-room photos for the small gallery tiles. Only Aristocrat Deluxe
+ * has its own set; the other rooms show their cover photo plus four of these
+ * (rotated per room) until the hotel supplies room-specific photos.
+ */
+const SHARED_PHOTOS: RoomPhoto[] = [
+  { src: adPhoto2, alt: "Guest room bed with bench and bedside lamps" },
+  { src: adPhoto3, alt: "Bed with upholstered headboard" },
+  { src: adPhoto4, alt: "Bed and wardrobe under a modern pendant light" },
+  { src: adPhoto5, alt: "Bed with wood-panelled wall" },
+  { src: ctaBedroom, alt: "Bright guest bedroom" },
+  { src: bookingRoom, alt: "Guest room interior" },
+];
+const withSharedPhotos = (cover: RoomPhoto, offset: number): RoomPhoto[] => [
+  cover,
+  ...[0, 1, 2, 3].map((i) => SHARED_PHOTOS[(offset + i) % SHARED_PHOTOS.length]),
+];
+
 export const ROOMS: RoomInfo[] = [
   {
     slug: "deluxe",
     name: "Deluxe",
     namePlain: "",
     nameItalic: "Deluxe",
-    photos: [{ src: roomDeluxe, alt: "Deluxe room with a large bed" }],
+    photos: withSharedPhotos({ src: roomDeluxe, alt: "Deluxe room with a large bed" }, 0),
     lead: "A calm, well-priced base in Gulshan-2 – a large bed, a work desk and everything you need for a short stay.",
     desc: "A calm, well-priced base in Gulshan-2 with a large bed, a work desk and everything you need for a short stay.",
     about:
@@ -71,7 +91,7 @@ export const ROOMS: RoomInfo[] = [
     name: "Super Deluxe",
     namePlain: "Super ",
     nameItalic: "Deluxe",
-    photos: [{ src: roomSuperDeluxe, alt: "Super Deluxe room with a king-size bed" }],
+    photos: withSharedPhotos({ src: roomSuperDeluxe, alt: "Super Deluxe room with a king-size bed" }, 2),
     lead: "More room to settle in – a king-size bed and warm, quiet interiors for longer trips.",
     desc: "More room to settle in, with a king-size bed and warm, quiet interiors – a comfortable choice for longer trips.",
     about:
@@ -121,7 +141,7 @@ export const ROOMS: RoomInfo[] = [
     name: "Aristocrat Deluxe (Twin)",
     namePlain: "Aristocrat Deluxe ",
     nameItalic: "(Twin)",
-    photos: [{ src: roomTwin, alt: "Aristocrat Deluxe Twin room with two beds" }],
+    photos: withSharedPhotos({ src: roomTwin, alt: "Aristocrat Deluxe Twin room with two beds" }, 4),
     lead: "Two beds in one spacious room – ideal for colleagues or friends travelling together.",
     desc: "Two beds in one spacious room – ideal for colleagues or friends travelling together.",
     about:
@@ -143,7 +163,7 @@ export const ROOMS: RoomInfo[] = [
     name: "Aristocrat Suite",
     namePlain: "Aristocrat ",
     nameItalic: "Suite",
-    photos: [{ src: roomSuite, alt: "Aristocrat Suite with a king-size bed" }],
+    photos: withSharedPhotos({ src: roomSuite, alt: "Aristocrat Suite with a king-size bed" }, 1),
     imgClassName: "pos-suite",
     lead: "Our largest room – a king-size bed and a separate sitting area for a small meeting or a family evening.",
     desc: "Our largest room, with a separate sitting area for a small meeting, a family evening or simply more space.",
