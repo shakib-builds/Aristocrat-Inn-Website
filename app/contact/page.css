@@ -8,7 +8,6 @@
   .c-hero { padding-inline: 16px; }
   .c-hero__inner {
     position: relative;
-    max-width: calc(var(--max) - 32px);
     margin-inline: auto;
     min-height: 600px;
     padding: 48px 48px 56px;

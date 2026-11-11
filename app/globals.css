@@ -206,7 +206,6 @@ main { padding-top: var(--header-h); }
 .hero { padding-inline: 16px; }
 .hero__inner {
   position: relative;
-  max-width: calc(var(--max) - 32px);
   margin-inline: auto;
   min-height: 760px;
   padding: 160px 32px 40px;

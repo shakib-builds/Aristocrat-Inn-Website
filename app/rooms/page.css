@@ -32,7 +32,6 @@
   .page-hero { padding-inline: 16px; }
   .page-hero__inner {
     position: relative;
-    max-width: calc(var(--max) - 32px);
     margin-inline: auto;
     min-height: 600px;
     padding: 32px;
