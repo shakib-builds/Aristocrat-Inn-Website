@@ -35,6 +35,7 @@
     margin-inline: auto;
     min-height: 600px;
     padding: 32px 48px;
+    padding-inline: max(var(--gutter), calc((100% - var(--max)) / 2 + var(--gutter))); /* line up with .wrap */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

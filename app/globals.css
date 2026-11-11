@@ -209,6 +209,8 @@ main { padding-top: var(--header-h); }
   margin-inline: auto;
   min-height: 760px;
   padding: 160px 48px 40px;
+  /* line up with .wrap (logo, section text) on every screen width */
+  padding-inline: max(var(--gutter), calc((100% - var(--max)) / 2 + var(--gutter)));
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
